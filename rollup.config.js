@@ -8,7 +8,7 @@ export default {
   output: [
     {
       file: 'dist/rain.js',
-      format: 'umd',
+      format: 'iife',
       name: 'Rain',
       sourcemap: true
     },
