@@ -58,7 +58,7 @@ export class rain {
 
   private drawBg() {
     const img = new Image();
-    img.src = '../docs/rain_bg2.jpg';
+    img.src = this.option.bgImg || 'node_modules/rain.js/docs/rain_bg2.jpg';
     const ctx = this.bg.getContext('2d');
 
     img.onload = () => {

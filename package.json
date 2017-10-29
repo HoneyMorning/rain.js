@@ -1,6 +1,6 @@
 {
   "name": "rain.js",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "A rain library base canvas.",
   "main": "dist/rain.es.js",
   "module": "dist/rain.es.js",
