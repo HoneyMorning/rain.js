@@ -1,6 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import typescript from 'rollup-plugin-typescript';
+import sass from 'rollup-plugin-sass';
 
 export default {
   input: 'src/index.ts',
@@ -29,6 +30,9 @@ export default {
     }),
     commonjs({
       include: 'node_modules/**'
+    }),
+    sass({
+      output: 'dist/rain.css',
     })
   ],
 
