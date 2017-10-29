@@ -1,10 +1,13 @@
 import './index.scss';
 import { Raindrop } from './raindrop';
+import { Lightning } from './lightning';
 import { Option } from './model';
 
 export class rain {
   private dom: HTMLCanvasElement;
   private bg: HTMLCanvasElement;
+  private lightning: HTMLCanvasElement;
+
   private ctx: CanvasRenderingContext2D;
   private width: number;
   private height: number;
@@ -20,6 +23,7 @@ export class rain {
     container.className = 'rain-container';
     this.bg = container.appendChild(document.createElement('canvas'));
     this.dom = container.appendChild(document.createElement('canvas'));
+    this.lightning = container.appendChild(document.createElement('canvas'));
 
     if (this.dom.getContext) {
       this.ctx = this.dom.getContext('2d');
@@ -49,6 +53,7 @@ export class rain {
     this.ctx.lineCap = 'round';
 
     this.raindrop = new Raindrop(this.option.extent, this.ctx, this.width, this.height);
+    new Lightning(this.lightning, this.width, this.height);
   }
 
   private drawBg() {
@@ -58,12 +63,16 @@ export class rain {
 
     img.onload = () => {
       ctx.drawImage(img, 0, 0, this.width, this.height);
-    }
+    };
   }
 
   private resizeListener() {
-    window.addEventListener('resize', () => {
-      this.initDom();
-    }, false);
+    window.addEventListener(
+      'resize',
+      () => {
+        this.initDom();
+      },
+      false
+    );
   }
 }

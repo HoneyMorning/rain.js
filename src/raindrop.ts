@@ -6,7 +6,7 @@ export class Raindrop {
   }
 
   private generateParticles() {
-    this.particles = [];    
+    this.particles = [];
     const sizes = this.extent === 'small' ? 400 : this.extent === 'large' ? 2000 : 1000;
     const rainExtent: string = 'middle'; // small, middle, large
 
