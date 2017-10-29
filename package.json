@@ -2,7 +2,15 @@
   "name": "rain.js",
   "version": "1.0.0-beta.0",
   "description": "A rain library base canvas.",
-  "main": "index.js",
+  "main": "dist/rain.es.js",
+  "module": "dist/rain.es.js",
+  "files": [
+    "README.md",
+    "LICENSE",
+    "dist",
+    "src",
+    "docs"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
