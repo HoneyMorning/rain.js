@@ -4,6 +4,7 @@
   "description": "A rain library base canvas.",
   "main": "dist/rain.es.js",
   "module": "dist/rain.es.js",
+  "types": "dist/index.d.ts",
   "files": [
     "README.md",
     "LICENSE",
