@@ -11,7 +11,6 @@ export class rain {
   private ctx: CanvasRenderingContext2D;
   private width: number;
   private height: number;
-  private particles: { x: number; y: number; l: number; xs: number; ys: number }[];
   private option: Option;
   private raindrop: Raindrop;
 
